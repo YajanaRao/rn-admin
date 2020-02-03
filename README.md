@@ -18,3 +18,8 @@
 
 `yarn ios`
 
+## Technologies
+
+### [React Native Web](https://github.com/necolas/react-native-web)
+### [React Router Native](https://reacttraining.com/react-router/native/guides/quick-start)
+### [EmotionJS](https://github.com/emotion-js/emotion)

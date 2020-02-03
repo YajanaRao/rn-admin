@@ -1,8 +1,7 @@
 import styled from '@emotion/native';
 
-export const Container = styled.View`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-`
+export const Container  = styled.View({
+  justifyContent: 'center',
+  alignItems: 'center',
+  flex: 1
+});

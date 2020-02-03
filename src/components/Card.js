@@ -1,13 +1,14 @@
-import styled from '@emotion/native';
+import React from 'react';
+import { View } from 'react-native';
+import { useTheme } from 'emotion-theming';
 
-export const Card = styled.View`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
-  border-radius: 4px;
-  padding: 20px;
-  background-color: ${props => props.theme.card};
-  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-  transition: 0.3s;
-`
+
+
+export const Card = ({ children }) => {
+  const theme = useTheme();
+  return (
+    <View style={{ backgroundColor: theme.card, margin: 12, padding: 12, justifyContent: 'center', alignItems: 'center', elevation: 4 }}>
+      {children}
+    </View>
+  );
+}

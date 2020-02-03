@@ -9,24 +9,23 @@ const Surface = styled.View`
 const TextInput = styled.TextInput(
   {
     borderWidth: 0.5,
-    borderRadius: 4,
+    borderRadius: 1,
     padding: 12,
     width: "100%",
-    borderColor: "grey",
     minWidth: 300
   },
   props => ({
     color: props.theme.text,
     backgroundColor: props.theme.backgroundColor,
-    borderColor: props.error ? "red" : "grey"
+    borderColor: props.error ? "red" : props.theme.backgroundColor
   })
 );
 
 const Caption = styled.Text`
   font-size: 16;
   color: ${props => props.theme.text};
-  padding: 1px;
-  font-weight: 500;
+  padding-vertical: 8px;
+  font-weight: 400;
   opacity: 0.5;
 `;
 
@@ -37,7 +36,7 @@ const ErrorText = styled.Text`
   opacity: 0.8;
 `;
 
-export const Input = ({ value, onChangeText, error, label, placeholder }) => {
+export const Input = ({ value, onChangeText, error, label, placeholder, secure=false }) => {
   return (
     <Surface>
       <Caption>{label}</Caption>
@@ -46,6 +45,7 @@ export const Input = ({ value, onChangeText, error, label, placeholder }) => {
         value={value}
         placeholder={placeholder}
         placeholderTextColor="grey"
+        secureTextEntry={secure}
         error={error}
       />
       {error ? <ErrorText>{error}</ErrorText> : false}

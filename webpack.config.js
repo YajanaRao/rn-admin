@@ -44,7 +44,11 @@ module.exports = {
             {
                 test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
                 loader: 'file-loader',
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
         ],
     },
     resolve: {

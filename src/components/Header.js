@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/native";
-import { css } from "@emotion/core";
 import { Link } from "react-router-native";
-import { getTextColor } from "./utils/color";
+import { Avatar } from './Avatar';
+import { Icon } from './Icon';
 
 const AppBar = styled.View`
   display: flex;
@@ -10,33 +10,34 @@ const AppBar = styled.View`
   align-items: center;
   flex-direction: row;
   padding: 20px;
+  height: 70px;  
   background-color: ${props => props.theme.card};
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  height: 60;
 `;
+
+const AppBarContainer = styled.View({
+  width: '100%',
+  elevation: 8,
+  paddingHorizontal: 4
+},
+  props => ({ backgroundColor: props.theme.card })
+);
+
 
 const Title = styled.Text(
   {
-    fontSize: 20,
-    margin: 2,
-    fontWeight: "900"
+    fontSize: 32,
+    marginHorizontal: 12,
+    fontWeight: "300"
   },
   props => ({ color: props.theme.text })
 );
 
-const RightAction = props => css`
-  padding: 12,
-  margin: 4,
-  borderRadius: 4,
-  width: 100%,
+const ContainedView = styled.View`
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-color: "#d4e2f7";
-  min-width: 64;
-  border-style: "solid";
+  
 `;
-
 const RightActionText = styled.Text(
   {
     fontSize: 15,
@@ -48,13 +49,26 @@ const RightActionText = styled.Text(
   props => ({ color: props.theme.primary })
 );
 
+const RightAction = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const Header = () => {
   return (
-    <AppBar>
-      <Title>Home</Title>
-      <Link to="/login" css={RightAction}>
-        <RightActionText>Logout</RightActionText>
-      </Link>
-    </AppBar>
+    <AppBarContainer>
+      <AppBar>
+        <ContainedView>
+          <Icon name="menu" />
+          <Title>rn-admin</Title>
+        </ContainedView>
+        <RightAction>
+          <Link to="/login" css={RightAction}>
+            <RightActionText>Logout</RightActionText>
+          </Link>
+          <Avatar />
+        </RightAction>
+      </AppBar>
+    </AppBarContainer>
   );
 };

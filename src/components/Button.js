@@ -11,7 +11,6 @@ const TouchableOpacity = styled.TouchableOpacity(
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    borderColor: "#d4e2f7",
     minWidth: 64,
     borderStyle: "solid"
   },
