@@ -1,4 +1,5 @@
 import React from "react";
+import { View } from "react-native";
 import styled from "@emotion/native";
 import color from "color";
 import { useTheme } from "emotion-theming";
@@ -15,6 +16,7 @@ const TouchableOpacity = styled.TouchableOpacity({
   alignItems: "center",
   minWidth: 64,
   borderStyle: "solid",
+  alignSelf: "stretch"
 });
 
 const ButtonText = styled.Text({
@@ -37,12 +39,14 @@ export const Button = ({ onPress, title, disabled = false }) => {
       .string();
   }
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      disabled={disabled}
-      style={{ backgroundColor }}
-    >
-      <ButtonText style={{ color: textColor }}>{title}</ButtonText>
-    </TouchableOpacity>
+    <View style={{ alignSelf: "stretch" }}>
+      <TouchableOpacity
+        onPress={onPress}
+        disabled={disabled}
+        style={{ backgroundColor }}
+      >
+        <ButtonText style={{ color: textColor }}>{title}</ButtonText>
+      </TouchableOpacity>
+    </View>
   );
 };
