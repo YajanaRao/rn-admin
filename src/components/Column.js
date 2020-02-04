@@ -1,7 +1,8 @@
 import React from "react";
-import { View } from "react-native";
-import styled from "@emotion/native";
+import { View, Platform } from "react-native";
 
 export const Column = ({ children }) => {
-  return <View style={{ flexDirection: "column" }}>{children}</View>;
+  const style =
+    Platform.OS === "web" ? { flex: 1 } : { flexDirection: "column" };
+  return <View style={style}>{children}</View>;
 };

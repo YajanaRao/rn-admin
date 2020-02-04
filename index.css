@@ -1,4 +1,9 @@
 @font-face {
-    font-family: 'MaterialCommunityIcons';
-    src: url('node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf') format('truetype');
+  font-family: "MaterialCommunityIcons";
+  src: url("node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf")
+    format("truetype");
+}
+
+.column {
+  flex: 1;
 }

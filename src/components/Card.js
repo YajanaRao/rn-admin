@@ -2,8 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import { useTheme } from 'emotion-theming';
 
-
-
 export const Card = ({ children }) => {
   const theme = useTheme();
   return (
