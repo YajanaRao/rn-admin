@@ -1,18 +1,7 @@
-import React from 'react';
-import styled from '@emotion/native';
-
-const View = styled.View`
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-`;
+import React from "react";
+import { View } from "react-native";
+import styled from "@emotion/native";
 
 export const Column = ({ children }) => {
-    return (
-        <View>
-            {children}
-        </View>
-    )
-}
+  return <View style={{ flexDirection: "column" }}>{children}</View>;
+};
