@@ -36,11 +36,21 @@ const ErrorText = styled.Text`
   opacity: 0.8;
 `;
 
-export const Input = ({ value, onChangeText, error, label, placeholder, secure=false }) => {
+export const Input = ({
+  value,
+  onChangeText,
+  error,
+  label,
+  placeholder,
+  secure = false,
+  type = "off"
+}) => {
   return (
     <Surface>
       <Caption>{label}</Caption>
       <TextInput
+        keyboardType={type === "email" ? "email-address" : "default"}
+        autoCompleteType={type}
         onChangeText={text => onChangeText(text)}
         value={value}
         placeholder={placeholder}

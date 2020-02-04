@@ -2,7 +2,11 @@
 
 ## Admin template based on React Native and emotion js
 
+![Demo](/assets/demo.png)
+
 ### Setup
+
+Install all the dependencies
 
 `yarn`
 
@@ -20,6 +24,8 @@
 
 ## Technologies
 
-### [React Native Web](https://github.com/necolas/react-native-web)
-### [React Router Native](https://reacttraining.com/react-router/native/guides/quick-start)
-### [EmotionJS](https://github.com/emotion-js/emotion)
+#### [React Native Web](https://github.com/necolas/react-native-web)
+#### [React Router Native](https://reacttraining.com/react-router/native/guides/quick-start)
+I have considered react navigation as well but react navigation does not look ready for the web yet.
+
+#### [EmotionJS](https://github.com/emotion-js/emotion)

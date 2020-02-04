@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
 import AppNavigator from "./src/Navigator";
 
 const DefaultTheme = {
-    primary: "orange",
+    primary: "tomato",
     card: "#ffffff",
     text: "#000000",
     backgroundColor: "#ebeff5"
@@ -19,7 +19,7 @@ const DarkTheme = {
 
 class App extends React.Component {
     state = {
-        theme: DefaultTheme
+        theme: DarkTheme
     };
 
     render() {
