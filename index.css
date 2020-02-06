@@ -4,6 +4,14 @@
     format("truetype");
 }
 
-.column {
-  flex: 1;
+a {
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }

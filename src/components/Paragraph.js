@@ -1,11 +1,30 @@
-import styled from '@emotion/native';
+import React from "react";
+import { Text } from "react-native";
+import color from "color";
+import { useTheme } from "emotion-theming";
 
-export const Paragraph = styled.Text(
-  {
-    fontSize: 16,
-    margin: 1,
-    opacity: 0.7,
-    fontFamily: 'Open Sans,sans-serif'
-  },
-  props => ({ color: props.theme.text })
-)
+export const Paragraph = props => {
+  const style = props.style;
+  const theme = useTheme();
+  const textColor = color(theme.text)
+    .alpha(0.87)
+    .rgb()
+    .string();
+
+  return (
+    <Text
+      allowFontScaling={true}
+      {...props}
+      style={[
+        style,
+        {
+          color: textColor,
+          fontSize: 16,
+          lineHeight: 20,
+          marginVertical: 2,
+          letterSpacing: 0.25
+        }
+      ]}
+    />
+  );
+};

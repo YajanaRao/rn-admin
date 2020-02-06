@@ -11,7 +11,7 @@ const AppBar = styled.View`
   flex-direction: row;
   padding: 20px;
   height: 70px;  
-  background-color: ${props => props.theme.card};
+  background-color: ${props => props.theme.primary};
 `;
 
 const AppBarContainer = styled.View({
@@ -46,7 +46,7 @@ const RightActionText = styled.Text(
     marginHorizontal: 12,
     textTransform: "uppercase"
   },
-  props => ({ color: props.theme.primary })
+  props => ({ color: props.theme.text })
 );
 
 const RightAction = styled.View`

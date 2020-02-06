@@ -1,31 +1,24 @@
 import React from "react";
 import { View } from "react-native";
-import styled from "@emotion/native";
+import styled from "@emotion/styled";
 import color from "color";
 import { useTheme } from "emotion-theming";
 
-import { getTextColor } from "./utils/color";
 // import { TouchableOpacity } from 'react-native';
-
-const TouchableOpacity = styled.TouchableOpacity({
-  padding: 12,
-  margin: 4,
-  borderRadius: 4,
-  width: "100%",
-  justifyContent: "center",
-  alignItems: "center",
-  minWidth: 64,
-  borderStyle: "solid",
-  alignSelf: "stretch"
-});
-
-const ButtonText = styled.Text({
-  fontSize: 15,
-  fontWeight: "bold",
-  textAlign: "center",
-  marginHorizontal: 12,
-  textTransform: "uppercase"
-});
+const TouchableOpacity = styled.button`
+  display: inline-block;
+  border-radius: 4px;
+  cursor: ${props => (props.disabled ? "not-allowed;" : "pointer;")};
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+  border-style: none;
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+`;
 
 export const Button = ({ onPress, title, disabled = false }) => {
   const theme = useTheme();
@@ -41,11 +34,11 @@ export const Button = ({ onPress, title, disabled = false }) => {
   return (
     <View style={{ alignSelf: "stretch" }}>
       <TouchableOpacity
-        onPress={onPress}
+        onClick={onPress}
         disabled={disabled}
-        style={{ backgroundColor }}
+        style={{ backgroundColor, color: textColor }}
       >
-        <ButtonText style={{ color: textColor }}>{title}</ButtonText>
+        {title}
       </TouchableOpacity>
     </View>
   );

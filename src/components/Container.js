@@ -1,7 +1,10 @@
-import styled from '@emotion/native';
+import React from "react";
+import { View } from "react-native";
 
-export const Container  = styled.View({
-  justifyContent: 'center',
-  alignItems: 'center',
-  flex: 1
-});
+export const Container = ({ children }) => {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      {children}
+    </View>
+  );
+};

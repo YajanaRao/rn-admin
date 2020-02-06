@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "emotion-theming";
-import { Platform } from 'react-native';
-import AppNavigator from "./src/Navigator";
+import AppNavigator from "./Navigation";
 
 const DefaultTheme = {
     primary: "tomato",
@@ -11,7 +10,7 @@ const DefaultTheme = {
 };
 
 const DarkTheme = {
-    primary: "orange",
+    primary: "#2874f0",
     card: "#222b45",
     text: "#ffffff",
     backgroundColor: "#101426"

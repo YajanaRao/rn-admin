@@ -2,8 +2,10 @@ import React from "react";
 import styled from "@emotion/native";
 
 const Surface = styled.View`
-  margin: 6px;
   width: 100%;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-vertical: 12;
 `;
 
 const TextInput = styled.TextInput(
@@ -11,8 +13,8 @@ const TextInput = styled.TextInput(
     borderWidth: 0.5,
     borderRadius: 1,
     padding: 12,
-    width: "100%",
-    minWidth: 300
+    minWidth: 300,
+    width: "100%"
   },
   props => ({
     color: props.theme.text,
@@ -52,6 +54,7 @@ export const Input = ({
         keyboardType={type === "email" ? "email-address" : "default"}
         autoCompleteType={type}
         onChangeText={text => onChangeText(text)}
+        adjustsFontSizeToFit
         value={value}
         placeholder={placeholder}
         placeholderTextColor="grey"
