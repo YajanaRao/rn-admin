@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 import { Redirect, Link } from "react-router-native";
-import { Screen } from "../components/Screen";
 import { Container } from "../components/Container";
 import { Card } from "../components/Card";
 import { Title } from "../components/Title";
 import { Paragraph } from "../components/Paragraph";
 import { Input } from "../components/Input";
-import { Button, LinkText } from "../components";
+import { Button, LinkText, Screen } from "../components";
 import { CheckBox } from "../components/CheckBox";
 import { Text } from "../components/Text";
 import { Content } from "../components/Content";

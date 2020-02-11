@@ -3,15 +3,3 @@
   src: url("node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf")
     format("truetype");
 }
-
-a {
-  color: blue;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-}

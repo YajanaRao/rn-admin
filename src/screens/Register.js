@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Text } from "../components/Text";
-import { Screen } from "../components/Screen";
 import { Container } from "../components/Container";
 import { Content } from "../components/Content";
 import { Card } from "../components/Card";
 import { Title } from "../components/Title";
 import { Input } from "../components/Input";
-import { Button, LinkText } from "../components";
+import { Button, LinkText, Screen } from "../components";
 import { Link } from "react-router-native";
 import { CheckBox } from "../components/CheckBox";
 
