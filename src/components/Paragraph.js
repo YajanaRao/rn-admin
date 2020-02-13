@@ -20,9 +20,9 @@ export const Paragraph = props => {
         {
           color: textColor,
           fontSize: 16,
-          lineHeight: 20,
+          lineHeight: 24,
           marginVertical: 2,
-          letterSpacing: 0.25
+          fontWeight: 400
         }
       ]}
     />

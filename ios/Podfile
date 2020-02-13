@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'RNAdmin' do
-  # Pods for RNAdmin
+target 'MyApp' do
+  # Pods for MyApp
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,9 +34,7 @@ target 'RNAdmin' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
-  target 'RNAdminTests' do
+  target 'MyAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -44,10 +42,10 @@ target 'RNAdmin' do
   use_native_modules!
 end
 
-target 'RNAdmin-tvOS' do
-  # Pods for RNAdmin-tvOS
+target 'MyApp-tvOS' do
+  # Pods for MyApp-tvOS
 
-  target 'RNAdmin-tvOSTests' do
+  target 'MyApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -7,7 +7,6 @@ import { List } from "../components/List";
 import { Card } from "../components/Card";
 import { Title } from "../components/Title";
 import { Paragraph } from "../components/Paragraph";
-import { Column } from "../components/Column";
 import { Button, Grid, Screen } from "../components";
 import { Divider } from "../components/Divider";
 import { Image } from "../components/Image";
